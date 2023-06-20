@@ -8,6 +8,7 @@ function Welcome (){
     const [quizState,dispatch] = useContext(QuizContext);
     function handleChangeQuestion(){
         dispatch({type:'CHANGE_STATE'})
+        dispatch({type:'REORDER_QUESTIONS'})
     }
     return(
         <Container>

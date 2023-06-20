@@ -26,6 +26,12 @@ const quizReducer = (state,action) =>{
                 return Math.random() - 0.5;
             });
 
+            reorderedQuestions.forEach((options)=>{
+                options.options.sort(()=>{
+                    return Math.random() - 0.5;
+                })
+            });
+
             return{
                 ...state,
                 questions:reorderedQuestions
